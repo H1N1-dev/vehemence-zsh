@@ -1,6 +1,5 @@
 # Vehemence by H1N1 and tupzikapi
-# This is nice two-line theme, without useless things like git.
-# Also, is a tty-friendly :)
+# This is nice minimalistic two-line theme
 
 # Theme shows:
 #	Time
@@ -8,36 +7,46 @@
 #	Name + Host
 #	Full path (without "~" as home)
 #	History value (how many commands you execute)
-#	Cute face indicator (Seems to be more suitable for furries)
+#	Indicator for errors (two styles)
 
 
 
 # Configuration
 
-owo_face=0 # Enable(1) for face indicator
+indicator=1 # 0 for disable, 1 for check mark and cross, 2 for "OwO" and ">w<"
 
 
-function owo() {
+function inde() {
 	local ret=$?
-	if [[ $ret -ne 0 ]]; then
-		echo '%F{1}>w<%f'
+	if [[ $indicator -eq 1 ]]; then
+		if [[ $ret -ne 0 ]]; then
+			echo '%F{1}✗%f'
+		fi
+		if [[ $ret -eq 0 ]]; then
+			echo '%F{2}✓%f'
+		fi
 	fi
-	if [[ $ret -eq 0 ]]; then
-		echo '%F{2}OwO%f'
+	if [[ $indicator -eq 2 ]]; then
+		if [[ $ret -ne 0 ]]; then
+			echo '%F{1}>w<%f'
+		fi
+		if [[ $ret -eq 0 ]]; then
+			echo '%F{2}OwO%f'
+		fi
 	fi
 }
 
 function err() {
 	local ret=$?
 	if [[ $ret -ne 0 ]]; then
-		echo '> %F{7}%?%f <'
+		echo '> %F{9}%?%f <'
 	fi
 }
 rn=$'\r\n'
 lfa="%B(%F{6} %n %m %f%F{2}%l%f )%b "   # Left Up 1 (NAME+HOST)
 lfb="%B(%F{3} %!%f )" 			# Left Up 2.1 (Commands)
-if [[ $owo_face -eq 1 ]]; then
-	lfbb=' ( $(owo) )%b'		# Left Up 2.2 (Indicator)
+if [[ $indicator -ne 0 ]]; then
+	lfbb=' ( $(inde) )%b'		# Left Up 2.2 (Indicator)
 else
 	lfbb=""				# Left Up 2.2 (Indicator OFF)
 fi
