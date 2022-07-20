@@ -2,7 +2,6 @@ this topic for the zsh shell was written by a programmer from Norilsk "h1n1" aro
 I am his friend (at least before) and I publish his development, without assigning the code to myself.
 
 you can also remove the OwO and >w< emoticon in the theme config, but I always changed it to a checkmark and a cross
-(sorry for spelling errors)
 
 (do not pay attention to errors in the text)
 
