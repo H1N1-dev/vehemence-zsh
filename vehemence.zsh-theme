@@ -7,19 +7,14 @@
 #	Return status (if not zero)
 #	Name + Host
 #	Full path (without "~" as home)
-#	Time to execute command (need plugin)
 #	History value (how many commands you execute)
 #	Cute face indicator (Seems to be more suitable for furries)
 
 
-# Deps:
-
-#	 Execute time: 		popstas/zsh-command-time
-
 
 # Configuration
 
-owo_face=1 # Enable(1) for face indicator
+owo_face=0 # Enable(1) for face indicator
 
 
 function owo() {
