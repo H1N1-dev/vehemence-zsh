@@ -1,4 +1,4 @@
-# Vehemence by H1N1
+# Vehemence by H1N1 and tupzikapi
 # This is nice two-line theme, without useless things like git.
 # Also, is a tty-friendly :)
 
