@@ -1,15 +1,15 @@
 What is?
 -----------
 **Vehemence** - just a two-line theme, that shows
-pwd, username/localhost, tty, time, error code and other things.
+pwd, username/localhost, tty, time, etc.
 
-Also, in the theme file there is a variable "indicator" that allows you to change the error indicator itself. For example, a value of "1" produces "a cross and a check mark", which can be seen in the first screenshot. With a value of "2", they give out the faces "OwO" and ">w<", which are visible in the second screenshot. If the value is 0, the indicator is absent.
-
-
-
-*Theme by h1n1-dev and tupzikapi.*
+Theme has configurarion variables.
+You can enable showing jobs count, time...
 
 Screenshots
 -----------
 ![](one.jpg)
 ![](two.jpg)
+
+*Theme originally made by h1n1-dev and tupzikapi.*
+*Support: h1n1-dev*
