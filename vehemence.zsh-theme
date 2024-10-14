@@ -5,8 +5,8 @@
 #	Time
 #	Return status (if not zero)
 #	Name + Host
-#	Full path (without "~" as home)
-#	History (how many commands you execute)
+#	Path
+#	History (how many commands you executed)
 #	Indicator for errors (two styles)
 #       Jobs running
 #
@@ -70,7 +70,7 @@ fi
 if [[ $jobsk -ne 0 ]]; then
 	local lfbb=$lfbb' $(jobber)'		# Left Up 2.2 (Indicator)
 fi
-local lfc="%B%F{13} %d %f%b%# "		# Left Down (Directory)
+local lfc="%B%F{13} %~ %f%b%# "		# Left Down (Directory)
 
 if [[ $timek -ne 0 ]]; then
 	local right='$(err) %B(%F{6} %* %f)%b' # Right Up
